@@ -32,7 +32,7 @@ const config = require('./config.json')
 const { loadCommands } = require("./src/Handlers/commandsHandler")
 const { loadEvents } = require('./src/Handlers/eventsHandler')
 
-client.login(config.token).then(async () => {
+client.login(process.env.TOKEN).then(async () => {
 
     loadCommands(client)
     loadEvents(client)
